@@ -31,4 +31,18 @@ describe("Tickets", () => {
     cy.get("#publication").check();
     cy.get("#friend").uncheck();
   });
+
+  it("has 'TICKETBOX' header's heading", () => {
+    cy.get("header h1").should("contain", "TICKETBOX");
+  });
+
+  it.only("alerts on invalid email", () => {
+    cy.get("#email").as("email").type("leonardo-email.com");
+
+    cy.get("#email.invalid").should("exist");
+
+    cy.get("@email").clear().type("leonardo@email.com");
+
+    cy.get("#email.invalid").should("not.exist");
+  });
 });
