@@ -1,0 +1,22 @@
+{
+  "name": "cypress-basic",
+  "version": "0.0.1",
+  "description": "Projeto básico para estudo do Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "test",
+    "automation",
+    "end-to-end",
+    "e2e",
+    "test"
+  ],
+  "author": "Leonardo <leonardo@okraciunas.com> (http://www.okraciunas.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^5.0.0"
+  }
+}
