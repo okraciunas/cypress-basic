@@ -69,4 +69,12 @@ describe("Tickets", () => {
     cy.get("button[type='reset']").click();
     cy.get("button[type='submit']").should("be.disabled");
   });
+
+  it.only("fills mandatory fields using support command", () => {
+    cy.fillMandatoryFields({ firstName, lastName, email });
+
+    cy.get("button[type='submit']").should("not.be.disabled");
+    cy.get("#agree").uncheck();
+    cy.get("button[type='submit']").should("be.disabled");
+  });
 });
